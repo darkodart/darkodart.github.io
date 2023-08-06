@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Source%20Code%20Pro');
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Source Code Pro";
+    background-color: #d5e5ff;
+    height: 100%;
+    padding: 10px;
+}
+
+.text-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 6em;
+    font-weight: 700;
+    text-align: center;
+    color: #0044aa;
+}
+
+.subtitle {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    color: #0044aa;
+}
+
+.caption {
+    font-size: 14px;
+    text-align: center;
+    margin: 30px;
+    padding: 20px;
+    color: #000000;
+}
