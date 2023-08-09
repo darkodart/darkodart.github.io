@@ -25,6 +25,23 @@ body {
     padding: 10px 20px;
 }
 
+.navbar-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    transition: background-color 0.3s ease;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -60,14 +77,31 @@ footer {
 @media screen and (max-width: 768px) {
     .nav-links {
         flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #222;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .nav-links li {
         margin-right: 0;
         margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
     }
 
     .dark-theme nav {
         padding: 10px;
+    }
+
+    .navbar-toggle.active .bar {
+        background-color: #6c63ff;
     }
 }
