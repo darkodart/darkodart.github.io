@@ -12,34 +12,12 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.logo {
-    color: #fff;
-    font-size: 24px;
-    margin-right: auto;
-}
-
 .dark-theme nav {
     background-color: #222;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px 20px;
-}
-
-.navbar-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: auto;
-    display: none;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px auto;
-    transition: background-color 0.3s ease;
 }
 
 .nav-links {
@@ -76,8 +54,8 @@ footer {
 
 @media screen and (max-width: 768px) {
     .nav-links {
-        flex-direction: column;
         display: none;
+        flex-direction: column;
         position: absolute;
         top: 60px;
         left: 0;
