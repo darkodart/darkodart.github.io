@@ -82,4 +82,19 @@ body {
     .dark-theme .navbar-toggle.active .bar {
         background-color: #6c63ff;
     }
+    
+    /* Style for the mobile navigation icon */
+    .dark-theme .navbar-toggle {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+    
+    .dark-theme .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px auto;
+        transition: background-color 0.3s ease;
+    }
 }
