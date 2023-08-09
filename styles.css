@@ -12,12 +12,16 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.dark-theme nav {
+.dark-theme header {
     background-color: #222;
+    padding: 10px 0;
+}
+
+.dark-theme nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 0 20px;
 }
 
 .dark-theme .nav-links {
