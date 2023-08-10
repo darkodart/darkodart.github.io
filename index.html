@@ -1,28 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>DARKODART WEB - Beranda</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DARKODART - Pengembang Aplikasi dan Seni Digital</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .header h1 {
+    margin: 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .content img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  }
+</style>
 </head>
-<body class="dark-theme">
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="profil.html">Profil</a></li>
-                <li><a href="dktv.html">DKTV</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Selamat Datang di DARKODART WEB</h1>
-        
-        <p>Situs web biografi tentang pengembang aplikasi DARKODART.</p>
-    </main>
-    <footer>
-        <p>&copy; 2023 DARKODART WEB. All rights reserved.</p>
-    </footer>
+<body>
+  <div class="header">
+    <h1>DARKODART</h1>
+    <p>Pengembang Aplikasi dan Seni Digital</p>
+  </div>
+
+  <div class="container">
+    <div class="content">
+      <img src="darkodart-logo.png" alt="DARKODART Logo">
+      <p>Selamat datang di DARKODART! Kami adalah tim pengembang aplikasi kreatif dan seni digital yang berfokus pada menghadirkan solusi inovatif dan karya seni yang memukau.</p>
+      <p>Dengan gabungan antara kreativitas dan teknologi, kami berdedikasi untuk menghasilkan produk-produk yang tidak hanya fungsional, tetapi juga indah secara visual.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2023 DARKODART. All rights reserved.</p>
+  </div>
 </body>
 </html>
