@@ -19,8 +19,18 @@
       const decrypted = CryptoJS.AES.decrypt({ ciphertext: ciphertext }, CryptoJS.lib.WordArray.create(key), { iv: iv });
       const decryptedText = decrypted.toString(CryptoJS.enc.Utf8);
 
+<<<<<<< HEAD
       // Langsung mengarahkan pemutaran ke tautan M3U yang dihasilkan dari dekripsi
       window.location.replace(decryptedText);
+=======
+      const userAgent = navigator.userAgent.toLowerCase();
+
+      if (userAgent.includes("android") && userAgent.includes("com.darkodart.tv")) {
+        // Jika diakses dari aplikasi Android dengan paket "com.darkodart.tv",
+        // langsung alihkan pemutaran ke link M3U yang sudah didekripsi
+        window.location.replace(decryptedText);
+      }
+>>>>>>> 9b0ac6082b0234018b7dc5d5a46d016421b69b34
     }
 
     fetchAndDecryptData();
