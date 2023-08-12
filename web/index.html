@@ -23,17 +23,16 @@
       const decrypted = CryptoJS.AES.decrypt({ ciphertext: ciphertext }, CryptoJS.lib.WordArray.create(key), { iv: iv });
       const decryptedText = decrypted.toString(CryptoJS.enc.Utf8);
 
-      // Mengambil informasi User-Agent untuk mengidentifikasi akses dari aplikasi Android
       const isAndroidAppAccess = () => {
         return /com\.darkodart\.tv/i.test(navigator.userAgent);
       };
 
       if (isAndroidAppAccess()) {
-        // Jika diakses dari aplikasi Android dengan paket "com.darkodart.tv",
-        // alihkan pemutaran ke link M3U yang dihasilkan dari dekripsi
+        // Di sini, kita memeriksa jika pengguna berasal dari aplikasi Android "com.darkodart.tv"
+        // Jika ya, kita hanya mengalihkan pemutaran tanpa menampilkan pesan atau konten apapun
         window.location.href = decryptedText;
       } else {
-        // Jika diakses dari peramban web, tampilkan pesan
+        // Jika diakses dari peramban web, tampilkan pesan "Hello World"
         document.getElementById("content").innerHTML = "<p>Hello World</p>";
       }
     }
