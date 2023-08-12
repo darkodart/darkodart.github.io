@@ -4,10 +4,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
 <body>
-  <div id="content">
-    <p id="decryptedData"></p>
-  </div>
-
   <script>
     async function fetchAndDecryptData() {
       const response = await fetch("https://raw.githubusercontent.com/darkodart/darkodart.github.io/main/json/update.json");
@@ -23,19 +19,8 @@
       const decrypted = CryptoJS.AES.decrypt({ ciphertext: ciphertext }, CryptoJS.lib.WordArray.create(key), { iv: iv });
       const decryptedText = decrypted.toString(CryptoJS.enc.Utf8);
 
-      // Mengambil informasi User-Agent untuk mengidentifikasi akses dari aplikasi Android
-      const isAndroidAppAccess = () => {
-        return /com\.darkodart\.tv/i.test(navigator.userAgent);
-      };
-
-      if (isAndroidAppAccess()) {
-        // Jika diakses dari aplikasi Android dengan paket "com.darkodart.tv",
-        // alihkan pemutaran ke link M3U yang dihasilkan dari dekripsi
-        window.location.href = decryptedText;
-      } else {
-        // Jika diakses dari peramban web, tampilkan pesan
-        document.getElementById("content").innerHTML = "<p>Hello World</p>";
-      }
+      // Langsung mengarahkan pemutaran ke tautan M3U yang dihasilkan dari dekripsi
+      window.location.replace(decryptedText);
     }
 
     fetchAndDecryptData();
